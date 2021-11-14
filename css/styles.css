@@ -74,8 +74,9 @@ img {
     text-decoration: none;
 }
 .header {
-    border: 1px;
-    border-color: var(--header-border-color) ;
+    border: 1px solid var(--header-border-color);
+    
+    
 }
 
 /* logo */
@@ -91,6 +92,7 @@ img {
     display: flex;
     padding-top: 24px;
     padding-bottom: 24px;
+    margin-right: 93px;
 
 
 }
@@ -103,22 +105,27 @@ img {
     line-height: 1.19;
 }
 /* nav */
+.main-nav {
+    display: flex;
+    align-items: center;
+}
 .container{
     width: 1230px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
 }
-.header-list {
-    display: flex;
+.header-list,
+.header-auth-nav{
+    display: flex;;
 }
-.header-list .header-item{
+.header-list .header-item {
     margin-right: 50px;
     padding-top: 32px;
     padding-bottom: 32px;
     display: block;
 }
-.header-list .header-item:last-child{
+.header-list .header-item:last-child {
     margin-right: 0px;
 }
 .header-link,
@@ -130,8 +137,17 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em; 
 }
-.header-auth-nav {
-    display: flex;
+.header-auth-nav .header-item{
+    margin-right: 50px;
+    padding-top: 32px;
+    padding-bottom: 32px;  
+}
+.header-auth-nav{
+    margin-left: auto
+}
+.header-auth-nav .header-item:last-child{
+    margin-right: 0px;
+    margin-left: 0px;
 }
 .header-auth-nav-info {
     color: var(--primary-text-color);
@@ -213,26 +229,39 @@ img {
     font-size: 14px;
     line-height: 1.71;
 }
+.persons-list{
+    display: flex;
+}
+.persons-item{
+    width: 270px;
+}
 
 /* -----------------WORK----------------- */
 
 .work-item{
     padding-top: 50px;
+    width: 370px;
 }
 .section-work{
     padding-bottom: 94px;
+}
+.work-list{
+    display: flex;
 }
 
 
 
 /* -----------------COMMAND----------------- */
-
+.command-list {
+    display: flex;
+}
 .section-command {
     background: var(--section-command-color);
     padding-bottom: 94px;
 }
 .command-item{
     padding-top: 50px;
+    width: 270px;
 }
 .command-people {
     color: var(--tittle-text-color);
@@ -240,14 +269,14 @@ img {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.8;
-    /* text-align: center; */
+    text-align: center;
 
     margin-top: 30px;
 }
 .command-special{
     font-size: 16px;
     line-height: 1.8;
-    /* text-align: center; */
+    text-align: center;
 
     margin-top: 10px;
 }
@@ -259,13 +288,17 @@ img {
 
 
 /* -----------------BUTTON----------------- */
-.btn {
+/* .btn {
     padding-left: 8px;
 }
 .btn:last-child {
     padding-left: 0px;
+} */
+.button {
+    display: flex;
+    justify-content: center;
+    
 }
-
 .button-link{
    color: var(--tittle-text-color);
     background-color: var(--section-command-color);
@@ -277,13 +310,13 @@ img {
     cursor:pointer;
 
     display: inline-block;
-    padding: 6px, 22px;
     border: 1px solid transparent;
     border-radius: 4px;
     min-width: 73px; 
     text-align: center;
-
-    margin-bottom: 34px;
+    margin-left: 8px;
+    padding-bottom: 4px;
+    
 }
 .button-link-current,
 .button-link:hover,
@@ -301,21 +334,21 @@ img {
     border: 1px solid transparent;
     border-radius: 4px;
     min-width: 73px; 
+    padding-bottom: 4px;
 }
-/* .button-link-current {
-    background-color: var(--accent-color);
-    color: var(--primary-white-color);
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.6; */
 
 /* -----------------PROJECT----------------- */
-.project-item {
-    border: 1px;
-    border-color: red;
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    
 }
+.project-item {
+    margin-top: 30px;
+    width: 370px;
+}
+
 .project-tittle{
     color: var(--tittle-text-color);
 
@@ -334,6 +367,7 @@ img {
     padding-left: 24px;
     padding-bottom: 20px;
     padding-right: 20px;
+    border: 1px solid #EEEEEE;
 }
 /* -----------------FOOTER----------------- */
 .footer {
@@ -381,8 +415,12 @@ img {
 .address-item-contact:focus {
     color: var(--accent-color);
 }
-.info {
+
+.address-item {
     margin-bottom: 9px;
+}
+.address-item:last-child {
+    margin-bottom: 0px;
 }
 
 
